@@ -21,7 +21,10 @@ namespace Ship
 
         void Start()
         {
-            shootCooldown = shipData.LaserCooldown;
+            if (shipData)
+            {
+                shootCooldown = shipData.LaserCooldown;
+            }
         }
 
         private void Update()
