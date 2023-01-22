@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 3379f08c3eb3edc44ad30295c00ebf08
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_ViewDataDictionary: {instanceID: 0}
+  - visualTreeAsset: {fileID: 9197481963319205126, guid: 1ed0aababbaab014d89ca58e223eaaca, type: 3}
+  - spawnerData: {fileID: 11400000, guid: d928c4610ace9b2478c72c7f25c49e76, type: 2}
+  - shipData: {fileID: 11400000, guid: af5694001b9322a40973eb4d3e82450a, type: 2}
+  - asteroidPrefab: {fileID: 1784223117350305363, guid: 01106835b2bc0e347a3bb06b7544b51a, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

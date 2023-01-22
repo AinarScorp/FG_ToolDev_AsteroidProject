@@ -1,0 +1,56 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:ScrollView>
+        <ui:VisualElement style="flex-grow: 1; background-color: rgba(255, 255, 255, 0); padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 54px; height: auto; width: auto; align-items: stretch; flex-direction: column; opacity: 1; display: flex; background-image: none; min-height: auto;">
+            <ui:GroupBox focusable="false" name="AsteroidInfoBox" style="height: auto; background-color: rgb(46, 46, 46); flex-direction: column;">
+                <ui:Label tabindex="-1" text="Asteroid Info" display-tooltip-when-elided="true" name="Label" style="-unity-text-align: upper-center; font-size: 24px; -unity-font-style: bold;" />
+                <ui:VisualElement name="AsteroidForce" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); padding-left: -5px; height: auto; border-bottom-width: 0; width: auto; -unity-text-align: upper-left; opacity: 1; flex-direction: column;">
+                    <ui:Label tabindex="-1" text="Force" display-tooltip-when-elided="true" style="-unity-text-align: upper-center; margin-bottom: 10px; margin-top: 10px; font-size: 16px; -unity-font-style: normal; width: 50%; -unity-text-outline-width: 0; background-color: rgb(62, 62, 62); left: 25%;" />
+                    <ui:Slider picking-mode="Ignore" label="Min" value="42" high-value="10" name="AsteroidForceMin" show-input-field="true" />
+                    <ui:Slider picking-mode="Ignore" label="Max" value="42" high-value="10" name="AsteroidForceMax" low-value="1" show-input-field="true" />
+                </ui:VisualElement>
+                <ui:VisualElement name="AsteroidSize" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); padding-left: -5px; flex-direction: column; width: auto; height: auto; max-height: none;">
+                    <ui:Label tabindex="-1" text="Size" display-tooltip-when-elided="true" style="-unity-text-align: upper-center; margin-bottom: 10px; margin-top: 10px; font-size: 16px; -unity-font-style: normal; background-color: rgb(62, 62, 62); white-space: nowrap; left: 25%; right: auto; width: 50%;" />
+                    <ui:Slider picking-mode="Ignore" label="Min" value="42" high-value="10" name="AsteroidSizeMin" show-input-field="true" />
+                    <ui:Slider picking-mode="Ignore" label="Max" value="42" high-value="10" name="AsteroidSizeMax" low-value="1" show-input-field="true" />
+                </ui:VisualElement>
+                <ui:VisualElement name="AsteroidTorque" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); padding-left: -5px; flex-direction: column; width: auto; height: auto; max-height: none;">
+                    <ui:Label tabindex="-1" text="Torque" display-tooltip-when-elided="true" style="-unity-text-align: upper-center; margin-bottom: 10px; margin-top: 10px; font-size: 16px; -unity-font-style: normal; background-color: rgb(62, 62, 62); white-space: nowrap; left: 25%; right: auto; width: 50%;" />
+                    <ui:Slider picking-mode="Ignore" label="Min" value="42" high-value="10" name="AsteroidTorqueMin" show-input-field="true" />
+                    <ui:Slider picking-mode="Ignore" label="Max" value="42" high-value="10" name="AsteroidTorqueMax" low-value="1" show-input-field="true" />
+                </ui:VisualElement>
+            </ui:GroupBox>
+            <ui:GroupBox focusable="false" name="AsteroidSpawnerInfoBox" style="height: 224px; background-color: rgb(46, 46, 46); flex-direction: column;">
+                <ui:Label tabindex="-1" text="Asteroid Spawner Info" display-tooltip-when-elided="true" name="Label" style="-unity-text-align: upper-center; font-size: 24px; -unity-font-style: bold;" />
+                <uie:ObjectField label="Asteroid Prefab" name="AsteroidPrefab" type="Asteroids.Asteroid, Assembly-CSharp" />
+                <ui:VisualElement name="SpawnTime" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); padding-left: -5px; height: auto; border-bottom-width: 0; width: auto; -unity-text-align: upper-left; opacity: 1; flex-direction: column;">
+                    <ui:Label tabindex="-1" text="Spawn Time" display-tooltip-when-elided="true" style="-unity-text-align: upper-center; margin-bottom: 10px; margin-top: 10px; font-size: 16px; -unity-font-style: normal; width: 50%; -unity-text-outline-width: 0; background-color: rgb(62, 62, 62); left: 25%;" />
+                    <ui:Slider picking-mode="Ignore" label="Min" value="42" high-value="30" name="SpawnTimeMin" show-input-field="true" />
+                    <ui:Slider picking-mode="Ignore" label="Max" value="42" high-value="50" name="SpawnTimeMax" low-value="1" show-input-field="true" />
+                </ui:VisualElement>
+                <ui:VisualElement name="SpawnAmount" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); padding-left: -5px; flex-direction: column; width: auto; height: auto; max-height: none;">
+                    <ui:Label tabindex="-1" text="Spawn Amount" display-tooltip-when-elided="true" style="-unity-text-align: upper-center; margin-bottom: 10px; margin-top: 10px; font-size: 16px; -unity-font-style: normal; background-color: rgb(62, 62, 62); white-space: nowrap; left: 25%; right: auto; width: 50%;" />
+                    <ui:SliderInt picking-mode="Ignore" label="Min" value="42" high-value="30" name="SpawnAmountMin" show-input-field="true" />
+                    <ui:SliderInt picking-mode="Ignore" label="Max" value="41" high-value="30" name="SpawnAmountMax" low-value="1" show-input-field="true" />
+                </ui:VisualElement>
+            </ui:GroupBox>
+            <ui:GroupBox focusable="false" name="ShipInfoBox" style="height: 387px; background-color: rgb(46, 46, 46); flex-direction: column;">
+                <ui:Label tabindex="-1" text="Ship Info" display-tooltip-when-elided="true" name="Label" style="-unity-text-align: upper-center; font-size: 24px; -unity-font-style: bold;" />
+                <ui:VisualElement name="Engine" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); padding-left: -5px; height: auto; border-bottom-width: 0; width: auto; -unity-text-align: upper-left; opacity: 1; flex-direction: column; max-height: none;">
+                    <ui:Label tabindex="-1" text="Engine" display-tooltip-when-elided="true" name="Label" style="-unity-text-align: upper-center; margin-bottom: 10px; margin-top: 10px; font-size: 16px; -unity-font-style: normal; width: 50%; left: 25%; background-color: rgb(62, 62, 62);" />
+                    <ui:Slider picking-mode="Ignore" label="Throttle Power" value="3.4" high-value="30" show-input-field="true" name="ThrottlePower" low-value="0.1" />
+                    <ui:Slider picking-mode="Ignore" label="Rotation Power" value="31.6" high-value="30" low-value="0.01" show-input-field="true" name="RotationPower" style="flex-direction: row; justify-content: space-between; align-self: stretch;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="Hull" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); padding-left: -5px; flex-direction: column; width: auto; height: auto; max-height: none;">
+                    <ui:Label tabindex="-1" text="Hull" display-tooltip-when-elided="true" style="-unity-text-align: upper-center; margin-bottom: 10px; margin-top: 10px; font-size: 16px; -unity-font-style: normal; width: 50%; left: 25%; background-color: rgb(62, 62, 62);" />
+                    <ui:SliderInt picking-mode="Ignore" label="Health Amount" value="42" high-value="30" name="HealthAmount" show-input-field="true" low-value="1" />
+                </ui:VisualElement>
+                <ui:VisualElement name="Laser" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); padding-left: -5px; flex-direction: column; width: auto; height: 130px; max-height: none;">
+                    <ui:Label tabindex="-1" text="Laser" display-tooltip-when-elided="true" style="-unity-text-align: upper-center; margin-bottom: 10px; margin-top: 10px; font-size: 16px; -unity-font-style: normal; width: 50%; left: 25%; background-color: rgb(62, 62, 62);" />
+                    <uie:ObjectField label="LaserPrefab" type="Ship.Laser, Assembly-CSharp" name="LaserPrefab" />
+                    <ui:Slider picking-mode="Ignore" label="Speed" value="42" high-value="20" name="LaserSpeed" show-input-field="true" />
+                    <ui:Slider picking-mode="Ignore" label="Cooldown" value="42" high-value="10" name="LaserCooldown" show-input-field="true" />
+                </ui:VisualElement>
+            </ui:GroupBox>
+        </ui:VisualElement>
+    </ui:ScrollView>
+</ui:UXML>
