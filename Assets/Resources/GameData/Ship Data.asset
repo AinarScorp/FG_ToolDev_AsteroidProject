@@ -15,6 +15,6 @@ MonoBehaviour:
   throttlePower: 15.48
   rotationPower: 15.49
   healthAmount: 15
-  laserSpeed: 15.82
-  laserCooldown: 10
+  laserSpeed: 2.31
+  laserCooldown: 0.26
   laserPrefab: {fileID: 5567069101288871488, guid: 2b9ecba75bf344a41ae8623bcd4fdab6, type: 3}

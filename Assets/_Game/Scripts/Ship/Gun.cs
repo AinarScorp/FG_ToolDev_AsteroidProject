@@ -7,6 +7,8 @@ namespace Ship
     public class Gun : MonoBehaviour
     {
         ShipData shipData;
+        float shootCooldown;
+        float timePassed;
 
         void Awake()
         {
@@ -16,10 +18,25 @@ namespace Ship
                 Debug.LogError("Ship data is not found");
             }
         }
+
+        void Start()
+        {
+            shootCooldown = shipData.LaserCooldown;
+        }
+
         private void Update()
         {
+            timePassed += Time.deltaTime;
+            if (timePassed < shootCooldown)
+            {
+                return;
+            }
+
             if (Input.GetKeyDown(KeyCode.Space))
+            {
+                timePassed = 0;
                 Shoot();
+            }
         }
         
         private void Shoot()
